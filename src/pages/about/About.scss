@@ -1,0 +1,52 @@
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    color: white;
+  }
+  
+  .about-banner {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  
+  .about-content {
+    margin-top: 10px;
+    text-align: left;
+  
+    h2 {
+      color: #004085;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        font-size: 16px;
+        background: #f8f9fa;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        color: #333;
+      }
+  
+      li strong {
+        margin-left: 10px;
+      }
+    }
+  }
+  

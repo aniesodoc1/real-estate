@@ -1,0 +1,85 @@
+@use "../../responsive" as *; 
+
+.profileUpdatePage {
+  height: 100%;
+  display: flex; 
+  color: white;
+  overflow: scroll;
+
+  .formContainer {
+      flex: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      
+      form {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .item {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+
+              input {
+                  padding: 20px;
+                  border-radius: 5px;
+                  border: 1px solid gray;
+              }
+          }
+
+          button {
+              border: none;
+              font-size: 24px;
+              font-weight: bold;
+              color: white;
+              text-decoration: none;
+              padding: 10px 20px;
+              background-color: blue;
+              border-radius: 10px;
+              transition: all 0.3s ease-in-out;
+
+              &:hover {
+                  background: white;
+                  color: black;
+              }
+          }
+      }
+  }
+
+  .sideContainer {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+
+      .avatar {
+          width: 50%;
+          object-fit: cover;
+          border-radius: 10px;
+      }
+
+  }
+
+  @include sm {
+    flex-direction: column; // Stack items vertically
+    align-items: center;
+    text-align: center;
+
+    .formContainer {
+        width: 100%;
+        order: 1; // Form stays at the top
+    }
+
+    .sideContainer {
+        width: 100%;
+        order: 2; // SideContainer moves below
+        padding: 20px; // Add padding for better spacing
+    }
+}
+  
+}

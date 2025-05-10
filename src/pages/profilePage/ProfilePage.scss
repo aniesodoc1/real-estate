@@ -1,0 +1,117 @@
+@use "../../responsive.scss" as *;
+
+.profilePage {
+    display: flex;
+    height: 100%;
+    color: white;
+
+    @include md {
+        flex-direction: column;
+    }
+
+    .details {
+        flex:3;
+       
+        @include md {
+            flex: none;
+            height: max-content;
+        }
+
+        .wrapper{
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            
+            .loading-message {
+                color: orange;
+                font-weight: bold;
+                margin-bottom: 10px;
+             }
+
+            .title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h1 {
+                    font-weight: 300;
+                }
+
+                .loading-message {
+                    color: orange;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                 }
+
+                button {
+                    padding: 18px 24px;
+                    background-color: blue;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 10px;
+                    color: white;
+                    font-size: 15px;
+                }
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                span{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    color: blue;
+
+                    b{
+                        color: white;
+                    }
+                }
+
+                button{
+                   width: 33%;
+                    border: none;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: white;
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    background-color: blue;
+                    border-radius: 10px;
+                    transition: all 0.3s ease-in-out;
+                    cursor: pointer;
+                
+                    &:hover {
+                        background: white;
+                        color: black;
+                    }
+                }
+
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .chatContainer {
+        margin-top: 15px;
+        flex: 2;
+        height: 100%;
+
+        @include md {
+            flex: none;
+            height: max-content;
+        }
+
+        .wrapper{
+            padding: 0px 20px;
+            height: 100%;
+        }
+    }
+}
